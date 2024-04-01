@@ -20,14 +20,13 @@ To use this forked version in your Quarto presentations, follow these steps:
 
 1. Clone this repository to your local machine.
 2. Copy the modified theme files into your Quarto project directory.
-3. Reference the forked theme in your Quarto project settings.
 
 For a detailed guide on using custom themes in Quarto, please refer to the [Quarto Documentation](https://quarto.org/docs/presentations).
 
 ## Credits
 
-All credits for the original design and development of the Quarto Clean theme go to [Grant McDermott](https://grantmcdermott.com/). This fork is a tribute to his excellent work in creating a clean, attractive theme for the Quarto community.
+All credits for the original design and development of the Quarto Clean theme go to [Grant McDermott](https://grantmcdermott.com/). This fork is a tribute to his great work in creating a clean, attractive theme for the Quarto community.
 
 ## License
 
-This forked version of the Quarto Clean theme is available under the same license as the original. Please see the LICENSE file for more details.
+This version of the Quarto Clean theme is available under the same license as the original. Please see the LICENSE file for more details.
