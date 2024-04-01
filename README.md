@@ -1,8 +1,8 @@
 # Quarto Presentation
 
-# Quarto Clean Theme - Forked Version
+This repository hosts a forked version of the [Quarto clean presentation theme](https://github.com/grantmcdermott/quarto-revealjs-clean). The original theme was designed by [Grant McDermott](https://grantmcdermott.com/) and I thank him for his excellent work.Although I have introduced a few minor modifications for personal use, the essence and aesthetic of the presentation remain closely aligned with the original design. You can view the modified version of the presentation [here](https://danilofreire.github.io/quarto-presentation/quarto-presentation.html).
 
-This repository hosts a forked version of the [Quarto clean presentation theme](https://github.com/grantmcdermott/quarto-revealjs-clean). The original theme was designed by [Grant McDermott](https://grantmcdermott.com/). Although I have introduced a few minor modifications for personal use, the essence and aesthetic of the presentation remain closely aligned with the original design. You can view the modified version of the presentation [here](https://danilofreire.github.io/quarto-presentation/).
+[![](screenshot.png "live demo")](https://danilofreire.github.io/quarto-presentation/quarto-presentation.html)
 
 ## Modifications
 
