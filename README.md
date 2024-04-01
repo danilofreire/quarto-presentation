@@ -22,7 +22,7 @@ To use this forked version in your Quarto presentations, follow these steps:
 2. Copy the modified theme files into your Quarto project directory.
 3. Reference the forked theme in your Quarto project settings.
 
-For a detailed guide on using custom themes in Quarto, please refer to the [Quarto Documentation](https://quarto.org/docs/presentations/themes.html).
+For a detailed guide on using custom themes in Quarto, please refer to the [Quarto Documentation](https://quarto.org/docs/presentations).
 
 ## Credits
 
