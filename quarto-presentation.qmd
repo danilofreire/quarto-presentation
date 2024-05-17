@@ -2,6 +2,7 @@
 title: Quarto reveal.js clean
 subtitle: A minimal and elegant presentation theme
 date: last-modified
+date-format: "DD MMMM, YYYY"
 author:
   - name: Danilo Freire
     orcid: 0000-0002-4712-6810
@@ -263,7 +264,7 @@ pairs(
 )
 ```
 
-## Components
+## Components {.scrollable}
 
 ### Multicolumn IV: Code and output with `tabset`
 
@@ -276,7 +277,7 @@ pairs(
 #| label: fig-tabset
 #| fig-cap: "Pairwise scatterplot" 
 #| fig-asp: 1
-#| out-width: 40%
+#| out-width: 90%
 palette("Classic Tableau")
 
 par(
@@ -312,7 +313,7 @@ pairs(
 ```
 :::
 
-# Tables  {background-color="#2d4563"}
+# Tables {background-color="#2d4563"}
 
 ## Tables 
 
