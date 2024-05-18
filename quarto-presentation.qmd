@@ -13,6 +13,10 @@ format:
     self-contained: true
     footer: "[My Presentation](https://danilofreire.github.io/)"
 bibliography: references.bib
+transition: slide
+transition-speed: default
+scrollable: true
+engine: jupyter
 editor:
   render-on-save: true
 ---
