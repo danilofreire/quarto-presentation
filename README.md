@@ -6,13 +6,11 @@ This repository hosts a forked version of the [Quarto clean presentation theme](
 
 ## Modifications
 
-The modifications made to the original Quarto Clean theme include:
+The (small) modifications made to the original Quarto Clean theme are:
 
 - Adjustments to the color scheme.
 - Font changes for improved readability.
 - Additional slide transition options.
-
-These changes are minor and aim to maintain the integrity and beauty of the original theme while providing some personalization.
 
 ## How to Use
 
@@ -21,7 +19,7 @@ To use this forked version in your Quarto presentations, follow these steps:
 1. Clone this repository to your local machine.
 2. Copy the modified theme files into your Quarto project directory.
 
-You can also add the theme to your directory with:
+You can also add this theme to your directory with:
 
 ```bash
 quarto install extension danilofreire/quarto-presentation
