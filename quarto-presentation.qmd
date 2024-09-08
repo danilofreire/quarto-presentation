@@ -6,8 +6,8 @@ date-format: "DD MMMM, YYYY"
 author:
   - name: Danilo Freire
     orcid: 0000-0002-4712-6810
-    email: dfreire@lincoln.ac.uk
-    affiliations: University of Lincoln
+    email: danilo.freire@emory.edu
+    affiliations: Emory University
 format:
   clean-revealjs:
     self-contained: true
