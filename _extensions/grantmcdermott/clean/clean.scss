@@ -295,3 +295,9 @@ $selection-bg: #2d4563 !default;
   color: #666666; /* Dark grey color for the caption */
   font-variant: small-caps; /* Use small caps for the caption text */
 }
+
+/* Code blocks */
+.reveal pre code { /* Adjust code chunk font size */
+  font-size: 1.25em !important;
+} 
+
