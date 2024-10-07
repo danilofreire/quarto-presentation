@@ -21,15 +21,6 @@ format:
           - matplotlib
           - numpy
           - pandas
-    quiz: 
-      checkKey: 'c'
-      resetKey: 'q'
-      shuffleKey: 't'
-      allowNumberKeys: true
-      disableOnCheck: false
-      shuffleOptions: false
-      defaultCorrect: "Correct!"
-      defaultIncorrect: "Incorrect!"
 bibliography: references.bib
 transition: slide
 transition-speed: default
@@ -39,7 +30,6 @@ revealjs-plugins:
   - drop
   - fontawesome
   - revealjs-text-resizer
-  - quiz
 filters:
   - pyodide
 editor:
@@ -490,19 +480,6 @@ globejs(lat=ll[, 1], long=ll[, 2], arcs=frequent_flights,
 _Note: Simple flight data example using `threejs`. There are many interactive
 plotting options beyond this.
 (More [details](https://quarto.org/docs/interactive/).)_
-
-# Quizzes {background-color="#2d4563"}
-
-## Quizzes {.quiz-question}
-
-This template also contains the [`quiz` plugin](https://github.com/parmsam/quarto-quiz)
-You can install it with `quarto install extension parmsam/quarto-quiz`
-Add `{.quiz-question}` to a slide to create a question and `{.correct}` to the correct answer
-
-- Option 1
-- [Option 2 which is correct]{.correct}
-- Option 3
-- Option 4
 
 # Font Awesome {background-color="#193C4D"}
 
