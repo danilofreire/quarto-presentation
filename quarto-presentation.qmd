@@ -487,16 +487,6 @@ plotting options beyond this.
 This theme also includes the [Font Awesome](https://fontawesome.com/) icon set
 Just use the `fa` class and the icon name: {{< fa thumbs-up >}} {{< fa brands bluetooth >}}
 
-# Text Resizer {background-color="#2d4563"}
-
-## How to use Reveal.js Text Resizer
-
-- Press <kbd>Alt/Opt</kbd> + <kbd>+</kbd> to increase text size
-
-- Press <kbd>Alt/Opt</kbd> + <kbd>-</kbd> to decrease text size
-
-- Press <kbd>Alt/Opt</kbd> + <kbd>0</kbd> to reset the text size
-
 # Drop {background-color="#193C4D"}
 
 ## Drop
