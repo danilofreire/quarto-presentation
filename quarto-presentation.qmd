@@ -29,7 +29,6 @@ engine: jupyter
 revealjs-plugins:
   - drop
   - fontawesome
-  - revealjs-text-resizer
 filters:
   - pyodide
 editor:
