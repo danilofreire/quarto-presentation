@@ -12,11 +12,36 @@ format:
   clean-revealjs:
     self-contained: true
     footer: "[My Presentation](https://danilofreire.github.io/)"
+    drop:
+      shortcut: "`"
+      button: true
+      engine: pyodide
+      pyodide:
+        packages:
+          - matplotlib
+          - numpy
+          - pandas
+    quiz: 
+      checkKey: 'c'
+      resetKey: 'q'
+      shuffleKey: 't'
+      allowNumberKeys: true
+      disableOnCheck: false
+      shuffleOptions: false
+      defaultCorrect: "Correct!"
+      defaultIncorrect: "Incorrect!"
 bibliography: references.bib
 transition: slide
 transition-speed: default
 scrollable: true
 engine: jupyter
+revealjs-plugins:
+  - drop
+  - fontawesome
+  - revealjs-text-resizer
+  - quiz
+filters:
+  - pyodide
 editor:
   render-on-save: true
 ---
@@ -466,29 +491,47 @@ _Note: Simple flight data example using `threejs`. There are many interactive
 plotting options beyond this.
 (More [details](https://quarto.org/docs/interactive/).)_
 
-# Summary {background-color="#193C4D"}
+# Quizzes {background-color="#2d4563"}
 
-## Summary
+## Quizzes {.quiz-question}
 
-### A minimal and elegant presentation theme
+This template also contains the [`quiz` plugin](https://github.com/parmsam/quarto-quiz)
+You can install it with `quarto install extension parmsam/quarto-quiz`
+Add `{.quiz-question}` to a slide to create a question and `{.correct}` to the correct answer
 
+- Option 1
+- [Option 2 which is correct]{.correct}
+- Option 3
+- Option 4
 
-The Quarto reveal.js [clean theme](grantmcdermott/quarto-revealjs-clean) aims to
-be a minimal and elegant presention theme.
+# Font Awesome {background-color="#193C4D"}
 
-We have highlighted some theme-specific components. But all of the regular reveal.js functionality is supported ([chalkboard](https://quarto.org/docs/presentations/revealjs/presenting.html#chalkboard), etc.)
+## Font Awesome
 
-Install the theme:
+This theme also includes the [Font Awesome](https://fontawesome.com/) icon set
+Just use the `fa` class and the icon name: {{< fa thumbs-up >}} {{< fa brands bluetooth >}}
 
-```{.bash}
-quarto install extension grantmcdermott/quarto-revealjs-clean
-```
+# Text Resizer {background-color="#2d4563"}
 
-Use these demo slides as a template:
+## How to use Reveal.js Text Resizer
 
-```{.bash}
-quarto use template grantmcdermott/quarto-revealjs-clean-demo
-```
+- Press <kbd>Alt/Opt</kbd> + <kbd>+</kbd> to increase text size
+
+- Press <kbd>Alt/Opt</kbd> + <kbd>-</kbd> to decrease text size
+
+- Press <kbd>Alt/Opt</kbd> + <kbd>0</kbd> to reset the text size
+
+# Drop {background-color="#193C4D"}
+
+## Drop
+
+If you want to toggle a Python terminal in your presentation, you can use the [`drop` plugin](https://github.com/r-wasm/quarto-drop)
+
+You can toggle the terminal with the backtick key (` ` `) or with the button below
+
+In this template, the plugin also comes with `matplotlib`, `numpy`, and `pandas` pre-installed
+
+You still need to import them in the terminal, though 
 
 ## References
 
