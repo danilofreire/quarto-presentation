@@ -242,7 +242,7 @@ span column in the same slide.
 :::: {.columns}
 
 ::: {.column width="50%"}
-![](images/kanagawa.jpg)
+![](figures/kanagawa.jpg)
 :::
 
 ::: {.column width="50%"}
@@ -427,7 +427,7 @@ etable(mods, highlight = .("se" = "complaints"), arraystretch = 1.5)
 
 ## Figure
 
-![](images/kanagawa.jpg)
+![](figures/kanagawa.jpg)
 
 ## Figure
 
@@ -441,7 +441,7 @@ Ideally, your figure will be the same aspect ratio as the screen that you're pre
 - This can be a bit tricky because of the dynamic nature of reveal.js / HTML. But it's probably something close to 16:9.
 - Aspect ratio can also matter for a regular full-frame images (previous slide).
 
-## {background-image="images/kanagawa169.jpg" background-size="100%"}
+## {background-image="figures/kanagawa169.jpg" background-size="100%"}
 
 ## Interactive plots
 
