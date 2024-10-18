@@ -19,6 +19,7 @@ format:
       pyodide:
         packages:
           - matplotlib
+          - micropip
           - numpy
           - pandas
 bibliography: references.bib
