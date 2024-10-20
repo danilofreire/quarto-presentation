@@ -458,40 +458,21 @@ Ideally, your figure will be the same aspect ratio as the screen that you're pre
 
 ## Interactive plots
 
-```{r}
+```{python}
 #| out-width: 75%
-
-library(threejs)
-
-# Approximate locations as factors
-data(flights)
-dest = factor(sprintf("%.2f:%.2f", flights[,3], flights[,4]))
-
-# A table of destination frequencies
-freq = sort(table(dest), decreasing=TRUE)
-
-# The most frequent destinations in these data
-frequent_destinations = names(freq)[1:10]
-
-# Subset the flight data by destination frequency
-idx = dest %in% frequent_destinations
-frequent_flights = flights[idx, ]
-
-# Lat/long and counts of frequent flights
-ll = unique(frequent_flights[, 3:4])
-
-# Plot frequent destinations as bars, and the flights to and from
-# them as arcs. Adjust arc width and color by frequency.
-globejs(lat=ll[, 1], long=ll[, 2], arcs=frequent_flights,
-        # bodycolor="#aaaaff", arcsHeight=0.3, arcsLwd=2,
-        bodycolor="#fff", arcsHeight=0.3, arcsLwd=2,
-        arcsColor="#ffff00", arcsOpacity=0.15,
-        atmosphere=TRUE, color="#fff", pointsize=0.5)
+from ipyleaflet import Map, Marker, basemaps, basemap_to_tiles
+m = Map(
+  basemap=basemap_to_tiles(
+    basemaps.NASAGIBS.ModisTerraTrueColorCR, "2017-04-08"
+  ),
+  center=(52.204793, 360.121558),
+  zoom=4
+)
+m.add_layer(Marker(location=(52.204793, 360.121558)))
+m
 ```
 
-_Note: Simple flight data example using `threejs`. There are many interactive
-plotting options beyond this.
-(More [details](https://quarto.org/docs/interactive/).)_
+Note: More [details here](https://quarto.org/docs/interactive/).
 
 # Font Awesome {background-color="#193C4D"}
 
