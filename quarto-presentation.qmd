@@ -264,24 +264,35 @@ See [here](https://quarto.org/docs/authoring/figures.html#subfigures).
 
 ### Multicolumn III: Code and output
 
-```{r}
+```{python}
 #| echo: false
 #| label: fig-pairs
 #| fig-cap: "Pairwise scatterplot" 
 #| fig-asp: 1
 #| output-location: column
+import seaborn as sns
+import matplotlib.pyplot as plt
+from matplotlib import rcParams
 
-palette("Classic Tableau")
+# Set the palette
+sns.set_palette("tab10")
 
-par(
-  family = "HersheySans",
-  las = 1, pch = 19, cex = 1.5
-)
+# Set the font family and other parameters
+rcParams['font.family'] = 'sans-serif'
+rcParams['font.sans-serif'] = ['HersheySans']
+rcParams['axes.labelsize'] = 12
+rcParams['axes.titlesize'] = 14
+rcParams['xtick.labelsize'] = 10
+rcParams['ytick.labelsize'] = 10
 
-pairs(
-  iris[,1:4],
-  col=iris$Species
-)
+# Load the iris dataset
+iris = sns.load_dataset("iris")
+
+# Create the pairwise scatterplot
+sns.pairplot(iris, hue="species", markers=["o", "s", "D"])
+
+# Show the plot
+plt.show()
 ```
 
 ## Components {.scrollable}
@@ -291,45 +302,60 @@ pairs(
 ::: {.panel-tabset}
 
 #### Output 
-```{r}
+```{python}
 #| echo: false
 #| eval: true
 #| label: fig-tabset
 #| fig-cap: "Pairwise scatterplot" 
 #| fig-asp: 1
 #| out-width: 90%
-palette("Classic Tableau")
+# Set the palette
+sns.set_palette("tab10")
 
-par(
-  family = "HersheySans",
-  las = 1, pch = 19, cex = 1.5
-)
+# Set the font family and other parameters
+rcParams['font.family'] = 'sans-serif'
+rcParams['font.sans-serif'] = ['HersheySans']
+rcParams['axes.labelsize'] = 12
+rcParams['axes.titlesize'] = 14
+rcParams['xtick.labelsize'] = 10
+rcParams['ytick.labelsize'] = 10
 
-pairs(
-  iris[,1:4],
-  col=iris$Species
-)
+# Load the iris dataset
+iris = sns.load_dataset("iris")
+
+# Create the pairwise scatterplot
+sns.pairplot(iris, hue="species", markers=["o", "s", "D"])
+
+# Show the plot
+plt.show()
 ```
 
 #### Code
 
-```{r}
+```{python}
 #| echo: true
 #| eval: false
 #| label: fig-tabset2
 #| output-location: default
+# Set the palette
+sns.set_palette("tab10")
 
-palette("Classic Tableau")
+# Set the font family and other parameters
+rcParams['font.family'] = 'sans-serif'
+rcParams['font.sans-serif'] = ['HersheySans']
+rcParams['axes.labelsize'] = 12
+rcParams['axes.titlesize'] = 14
+rcParams['xtick.labelsize'] = 10
+rcParams['ytick.labelsize'] = 10
 
-par(
-  family = "HersheySans",
-  las = 1, pch = 19, cex = 1.5
-)
+# Load the iris dataset
+iris = sns.load_dataset("iris")
 
-pairs(
-  iris[,1:4],
-  col=iris$Species
-)
+# Create the pairwise scatterplot
+sns.pairplot(iris, hue="species", markers=["o", "s", "D"])
+
+# Show the plot
+plt.show()
 ```
 :::
 
@@ -339,91 +365,76 @@ pairs(
 
 ### Regression example
 
-Quarto offers excellent
-[table support](https://quarto.org/docs/authoring/tables.html),
-with further customization via user libraries. Let's illustrate with a
-regression example:
+:::{style="font-size: 22px;"}
+Quarto offers excellent [table support](https://quarto.org/docs/authoring/tables.html), with further customization via user libraries. Let's illustrate with a regression example:
+:::
 
-```{r}
+:::{style="font-size: 15px;"}
+
+```{python}
 #| echo: true
+import statsmodels.api as sm
+import statsmodels.formula.api as smf
+import pandas as pd
 
-library(fixest)
+# Example data
+data = {
+    'rating': [1, 2, 3, 4, 5],
+    'complaints': [1, 2, 3, 4, 5],
+    'privileges': [1, 2, 3, 4, 5],
+    'learning': [1, 2, 3, 4, 5],
+    'raises': [1, 2, 3, 4, 5],
+    'critical': [1, 2, 3, 4, 5],
+    'advance': [1, 2, 3, 4, 5]
+}
+attitude = pd.DataFrame(data)
 
-mods = feols(
-  rating ~ complaints + privileges + learning + csw0(raises + critical) + advance,
-  data = attitude
-)
+# Fit the model
+formula = 'rating ~ complaints + privileges + learning + raises + critical + advance'
+model = smf.ols(formula=formula, data=attitude).fit()
 
-dict = c("rating"     = "Overall Rating",
-         "complaints" = "Handling of Complaints",
-         "privileges" = "No Special Priviledges",
-         "learning"   = "Opportunity to Learn",
-         "raises"     = "Performance-Based Raises",
-         "critical"   = "Too Critical",
-         "advance"    = "Advancement")
+# Coefficient mapping dictionary
+coef_map = {
+    "rating": "Overall Rating",
+    "complaints": "Handling of Complaints",
+    "privileges": "No Special Privileges",
+    "learning": "Opportunity to Learn",
+    "raises": "Performance-Based Raises",
+    "critical": "Too Critical",
+    "advance": "Advancement"
+}
 ```
+:::
 
 ## Regression table
 
-### modelsummary
+:::{style="font-size: 16px;"}
+```{python}
+#| label: tbl-regression
+#| tbl-cap: Regression results for the `attitude` dataset
+#| tbl-attr: {style="width: 80%"}
 
-If you use `modelsummary` with this Quarto theme, we advise setting the `gt`
-backend for a cleaner aesthetic. More details
-[here](https://vincentarelbundock.github.io/modelsummary/articles/appearance.html).
+# Create a DataFrame for the table
+from stargazer.stargazer import Stargazer
+from IPython.core.display import HTML
 
-```{r}
-#| echo: true
-#| output-location: slide
+# Fit the model
+formula = 'rating ~ complaints + privileges + learning + raises + critical + advance'
+model = smf.ols(formula=formula, data=attitude).fit()
 
-library(modelsummary)
-options(modelsummary_factory_default = "gt")
+# Create a Stargazer object
+stargazer = Stargazer([model])
 
-modelsummary(
-  setNames(mods, c("(1)", "(2)")),
-  coef_map = dict, stars = TRUE,
-  gof_omit = "Adj|IC|F|Log|RMSE"
-  ) |>
-  gt::tab_spanner(
-    label = "Dependent variable: Overall Rating",
-    columns = 2:3
-  )
+# Set the custom labels
+stargazer.rename_covariates(coef_map)
+
+# Generate the HTML table
+html_table = stargazer.render_html()
+
+# Display the HTML table (for Jupyter Notebook)
+display(HTML(html_table))
 ```
-
-## Regression table
-
-### etable
-
-`fixest`'s powerful native tabling functions were designed for LaTeX output. But we
-can use the `markdown = TRUE` option to make them work with this theme too. 
-(Details
-[here](https://lrberge.github.io/fixest/articles/etable_new_features.html).) Quick notes:
-
- - Install the `tinytex` & `pdftools` packages first.
- - Set the R chunk option `output: asis`. 
-
-````
-```{{r}}
-#| output: asis
-
-setFixest_etable(markdown = TRUE, drop = "Constant")
-setFixest_dict(dict)
-
-etable(mods, highlight = .("se" = "complaints"))
-```
-````
-
-## Regression table
-
-### etable (cont.)
-
-```{r}
-#| output: asis
-
-setFixest_etable(markdown = TRUE, drop = "Constant")
-setFixest_dict(dict)
-
-etable(mods, highlight = .("se" = "complaints"), arraystretch = 1.5)
-```
+:::
 
 # Figures {background-color="#193C4D"}
 
