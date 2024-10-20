@@ -11,9 +11,9 @@ author:
 format:
   clean-revealjs:
     self-contained: true
+    code-overflow: wrap
     footer: "[My Presentation](https://danilofreire.github.io/)"
     drop:
-      shortcut: "`"
       button: true
       engine: pyodide
       pyodide:
@@ -22,16 +22,17 @@ format:
           - micropip
           - numpy
           - pandas
+          - seaborn
 bibliography: references.bib
 transition: slide
 transition-speed: default
 scrollable: true
 engine: jupyter
 revealjs-plugins:
+  - appearance
   - drop
   - fontawesome
-filters:
-  - pyodide
+  - multimodal
 editor:
   render-on-save: true
 ---
@@ -499,6 +500,39 @@ You can toggle the terminal with the backtick key (` ` `) or with the button bel
 In this template, the plugin also comes with `matplotlib`, `numpy`, and `pandas` pre-installed
 
 You still need to import them in the terminal, though 
+
+# Pyodide {background-color="#193C4D"}
+
+## Pyodide
+
+If you want to run Python code in your presentation, you can use the `pyodide` engine. Click on the terminal button on the bottom left to open a Python terminal.
+
+# Appearance {background-color="#193C4D"}
+
+## Appearance
+
+This presentation theme also includes the [Appearance plugin](). You can use it to animate elements on your slides.
+
+1. [This is a list item]{.animate__fadeInLeft data-appear-parent="true"}
+2. [This is a list item]{.animate__fadeInLeft data-appear-parent="true" data-delay="100"}
+3. [Split into words]{.animate__fadeInDown data-split="words" data-appear-parent="true" data-delay="250"}
+4. [Split into letters]{.animate__fadeInDown data-split="letters" data-appear-parent="true" data-delay="500"}
+
+# Multimodal {background-color="#193C4D"}
+
+## Multimodal
+
+Multimodel can be used to showcase images, videos or code in your presentation.
+
+[Show figure](#){data-modal-type="image" data-modal-url="figures/2.jpg"}
+
+[Link to a Markdown file](#){data-modal-type="html" data-modal-url="figures/example.md" data-modal-class="textleft"}
+
+[Link to an external website](https://www.wikipedia.org){data-modal-type="iframe"}
+
+[Link to a Youtube video](#){data-modal-type="iframe" data-modal-url="https://www.youtube.com/embed/dQw4w9WgXcQ?&autoplay=1"}
+
+Please refer to the `quarto-presentation.qmd` file for the code to generate these multimodal elements.
 
 ## References
 

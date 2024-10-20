@@ -11,6 +11,7 @@ The (small) modifications made to the original Quarto Clean theme are:
 - Adjustments to the color scheme.
 - Font changes for improved readability.
 - Additional slide transition options.
+- Quarto plugins that are not part of the original theme but are useful for my presentations.
 
 ## How to Use
 
@@ -29,7 +30,15 @@ For a detailed guide on using custom themes in Quarto, please refer to the [Quar
 
 ## Credits
 
-All credits for the original design and development of the Quarto Clean theme go to [Grant McDermott](https://grantmcdermott.com/). This fork is a tribute to his great work in creating a great theme for the Quarto community.
+All credits for the original design and development of the Quarto Clean theme go to [Grant McDermott](https://grantmcdermott.com/). I would also like to thank [Martijn de Jongh](https://martinomagnifico.github.io/) for [Appearance](https://github.com/martinomagnifico/quarto-appearance) and [Multimodal](https://github.com/Martinomagnifico/quarto-multimodal), the [R for WebAssembly team](https://github.com/r-wasm) for [Quarto Drop](https://github.com/r-wasm/quarto-drop), and the [Quarto team](https://quarto.org/) for creating such a great tool.
+
+You can add more extensions to your Quarto project with:
+
+```bash
+quarto install extension repositoryowner/repo
+```
+
+A list of available extensions can be found at <https://m.canouil.dev/quarto-extensions/>.
 
 ## License
 
