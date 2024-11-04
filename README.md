@@ -26,6 +26,14 @@ You can also add this theme to your directory with:
 quarto install extension danilofreire/quarto-presentation
 ```
 
+You can install the additional extensions with:
+
+```bash
+quarto install extension r-wasm/quarto-drop
+quarto install extension martinomagnifico/quarto-appearance
+quarto install extension martinomagnifico/quarto-multimodal
+```
+
 For a detailed guide on using custom themes in Quarto, please refer to the [Quarto Documentation](https://quarto.org/docs/presentations).
 
 ## Credits
