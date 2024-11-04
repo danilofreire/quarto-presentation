@@ -22,14 +22,13 @@ format:
           - micropip
           - numpy
           - pandas
-          - seaborn
+          - seabornc
 bibliography: references.bib
 transition: slide
 transition-speed: default
 scrollable: true
 engine: jupyter
 revealjs-plugins:
-  - appearance
   - drop
   - fontawesome
   - multimodal
@@ -455,24 +454,6 @@ Ideally, your figure will be the same aspect ratio as the screen that you're pre
 - Aspect ratio can also matter for a regular full-frame images (previous slide).
 
 ## {background-image="figures/kanagawa169.jpg" background-size="100%"}
-
-## Interactive plots
-
-```{python}
-#| out-width: 75%
-from ipyleaflet import Map, Marker, basemaps, basemap_to_tiles
-m = Map(
-  basemap=basemap_to_tiles(
-    basemaps.NASAGIBS.ModisTerraTrueColorCR, "2017-04-08"
-  ),
-  center=(52.204793, 360.121558),
-  zoom=4
-)
-m.add_layer(Marker(location=(52.204793, 360.121558)))
-m
-```
-
-Note: More [details here](https://quarto.org/docs/interactive/).
 
 # Font Awesome {background-color="#193C4D"}
 
