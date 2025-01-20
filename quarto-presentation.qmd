@@ -22,7 +22,7 @@ format:
           - micropip
           - numpy
           - pandas
-          - seabornc
+          - seaborn
 bibliography: references.bib
 transition: slide
 transition-speed: default
