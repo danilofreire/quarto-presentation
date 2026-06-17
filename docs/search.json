@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Quarto clean",
+    "section": "",
+    "text": "Quarto reveal.js clean\n    A minimal and elegant reveal.js presentation theme for Quarto. This is a personal fork of Grant McDermott's clean theme, with a few small tweaks to colours, fonts, and extensions.\n    \n      reveal.js\n      minimal\n      MIT licence\n      fork of clean\n    \n    \n      Open the live demo\n      View on GitHub\nThe demo also uses three extra extensions. Install the ones you need:\nThen set the format in your presentation’s YAML header and render:\nFor more on custom themes, see the Quarto presentations documentation.\nThis theme stands on other people’s work, and the credit belongs to them:\nThis fork uses the same licence as the original theme: the MIT licence. You are free to use and adapt it; please keep the copyright notice for both Grant McDermott and the modifications"
+  },
+  {
+    "objectID": "index.html#what-this-fork-changes",
+    "href": "index.html#what-this-fork-changes",
+    "title": "Quarto clean",
+    "section": "What this fork changes",
+    "text": "What this fork changes"
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "Quarto clean",
+    "section": "Installation",
+    "text": "Installation\nAdd the theme to a Quarto project in one command."
+  },
+  {
+    "objectID": "index.html#credits",
+    "href": "index.html#credits",
+    "title": "Quarto clean",
+    "section": "Credits",
+    "text": "Credits"
+  },
+  {
+    "objectID": "index.html#licence",
+    "href": "index.html#licence",
+    "title": "Quarto clean",
+    "section": "Licence",
+    "text": "Licence"
+  }
+]

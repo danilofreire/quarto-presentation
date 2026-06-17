@@ -1,0 +1,45 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - index.qmd
+  resources:
+    - quarto-presentation.html
+    - screenshot.png
+
+website:
+  title: "Quarto clean"
+  description: "A minimal and elegant reveal.js presentation theme for Quarto, forked from Grant McDermott's clean theme."
+  site-url: https://danilofreire.github.io/quarto-presentation
+  repo-url: https://github.com/danilofreire/quarto-presentation
+  favicon: assets/favicon.svg
+  open-graph: true
+  navbar:
+    pinned: true
+    left:
+      - text: Live demo
+        href: quarto-presentation.html
+      - text: Install
+        href: index.qmd#install
+      - text: Credits
+        href: index.qmd#credits
+    right:
+      - icon: github
+        href: https://github.com/danilofreire/quarto-presentation
+        aria-label: GitHub repository
+  page-footer:
+    border: false
+    left: "A fork of [grantmcdermott/quarto-revealjs-clean](https://github.com/grantmcdermott/quarto-revealjs-clean), under the MIT licence."
+    right: "[Source on GitHub](https://github.com/danilofreire/quarto-presentation)"
+
+format:
+  html:
+    theme: [cosmo, styles.scss]
+    toc: false
+    page-layout: full
+    grid:
+      body-width: 1100px
+    link-external-newwindow: true
+    link-external-icon: false
+    anchor-sections: false
+    lang: en-GB
