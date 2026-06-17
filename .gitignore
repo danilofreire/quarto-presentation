@@ -576,6 +576,11 @@ vignettes/*.pdf
 # docs/  -- not ignored here: docs/ is the Quarto website output served by GitHub Pages
 docs/*/_extensions/
 
+# The rendered deck at the repo root is a local build artifact only. It is copied
+# into docs/ on render (the committed, served copy), so we do not track it twice.
+# Re-render it with: quarto render quarto-presentation.qmd
+/quarto-presentation.html
+
 # translation temp files
 po/*~
 
